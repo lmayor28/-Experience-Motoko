@@ -130,7 +130,7 @@ function App() {
       
       <div className={`header-content${showHeaderContent ? '' : 'hidden'}`}>
         <p className="slogan Motoko" id="Motoko">MOTOKO BOOTCAMP</p>
-        <p className="Introduccion">Esta es una aplicación web creada con Motoko que permite dejar comentarios de texto y votar los comentarios de otros usuarios. La aplicación tiene como objetivo recoger las opiniones y experiencias de los participantes en el bootcamp de Motoko. Se invita a los usuarios a dejar sus comentarios y a votar los comentarios que les parezcan más interesantes o útiles. La pagina se encuentra en desarrollo pero agradecen las sugerencias de nuevas funcionalidades o mejoras para la aplicación. Se espera que disfruten de la aplicación web y que compartan sus aprendizajes!!! </p>
+        <p className="Introduccion">Esta es una aplicación web creada con Motoko que permite dejar comentarios de texto y votar los comentarios de otros usuarios. La aplicación tiene como objetivo recoger las opiniones y experiencias de los participantes en el bootcamp de Motoko. Se invita a los usuarios a dejar sus comentarios y a votar los comentarios que les parezcan más interesantes o útiles. La pagina se encuentra en desarrollo pero agradecen las sugerencias de nuevas funcionalidades o mejoras para la aplicación. Se espera que disfruten de la aplicación web y que compartan sus aprendizajes!!! <a href="https://github.com/lmayor28/-Experience-Motoko/">GitHub del proyecto</a>. <a href="https://twitter.com/LuisMayorMoren1">By @lmayor28</a></p>
         {/* <p className="slogan">{principal}</p> */}
         <p className="twitter">by <a href="https://twitter.com/LuisMayorMoren1">@LUISoseaYo</a></p>
 
