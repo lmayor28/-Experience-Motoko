@@ -1,0 +1,60 @@
+type User__1 = 
+ record {
+   isActive: bool;
+   posts: vec nat;
+   principalID: principal;
+   status: Status;
+   userName: text;
+ };
+type User = 
+ record {
+   isActive: bool;
+   posts: vec nat;
+   principalID: principal;
+   status: Status;
+   userName: text;
+ };
+type Time = int;
+type Status = 
+ variant {
+   Admin;
+   Other;
+   Owner;
+   User;
+ };
+type Result = 
+ variant {
+   err: text;
+   ok;
+ };
+type Post = 
+ record {
+   content: text;
+   createDate: Time;
+   owner: User__1;
+   postID: nat;
+   voters: vec principal;
+   votes: int;
+ };
+service : {
+  _createNewUser: (principal, text) -> (bool);
+  addAdmin: (principal) -> (Result);
+  cantPosts: () -> (nat) query;
+  cantUser: () -> (nat) query;
+  cargarCuentasMBC: () -> (Result);
+  createPost: (text, User) -> (Result);
+  createUser: (principal, text) -> (Result);
+  deletePost: (nat, User) -> (Result);
+  getMyUser: (text) -> (User) query;
+  getPostIdSortByVotes: () -> (vec nat) query;
+  getUser: (principal) -> (User) query;
+  resetHeap: () -> () oneway;
+  seePosts: () -> (vec Post) query;
+  seeUsers: () -> (vec record {
+                         text;
+                         principal;
+                       }) query;
+  verXcantidadDePosts: (nat, nat) -> (vec Post) query;
+  voteDown: (nat, User) -> (Result);
+  voteUp: (nat, User) -> (Result);
+}

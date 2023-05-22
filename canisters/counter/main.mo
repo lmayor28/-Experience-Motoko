@@ -225,7 +225,7 @@ actor {
             Buffer.toArray(buffer);
         };
 
-        func _createNewUser(principal : Principal, _userName : Text) : Bool{
+        public func _createNewUser(principal : Principal, _userName : Text) : async Bool{
             switch (userStorage.get(principal)){
                 case (null){
                     var newUser : User = {

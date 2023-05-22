@@ -14,13 +14,10 @@ import "@connect2ic/core/style.css"
 /*
 * Import canister definitions like this:
 */
-import * as counter from "../.dfx/local/canisters/counter"
+import * as counter from "../src/declarations/counter"
 /*
 * Some examples to get you started
 */
-import { Counter } from "./components/Counter"
-import { Transfer } from "./components/Transfer"
-import { Profile } from "./components/Profile"
 import { Nav } from "./components/Nav"
 import { Posts } from "./components/Posts"
 import { CreatePost } from "./components/CreatePost"
